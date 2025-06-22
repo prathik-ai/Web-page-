@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketing</title>
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090918;
+      --primary: #ffffff;
+      --secondary: #cccccc;
+      --accent1: #e76f51;
+      --accent2: #b5838d;
+      --accent3: #a2d2ff;
+      --accent4: #cdb4db;
+      --card-bg: #14142a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: var(--bg);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #b6b6ff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-btn {
+      background: none;
+      border: 1px solid white;
+      border-radius: 20px;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(to bottom, #0e0b2b, #1b0e48);
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1em;
+      color: var(--secondary);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .buttons .get-started {
+      background-color: white;
+      color: #090918;
+      font-weight: bold;
+    }
+
+    .buttons .book-demo {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+
+    .buttons .get-started:hover {
+      background: #ddd;
+    }
+
+    .buttons .book-demo:hover {
+      background-color: white;
+      color: #090918;
+    }
+
+    .partners {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 30px 10px;
+      flex-wrap: wrap;
+    }
+
+    .partners span {
+      opacity: 0.7;
+      font-size: 1em;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 10px;
+    }
+
+    .feature-card,
+    .testimonial {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 20px;
+      width: 300px;
+    }
+
+    .feature-card span {
+      display: inline-block;
+      padding: 8px 15px;
+      margin: 6px 5px;
+      border-radius: 12px;
+      font-size: 0.9em;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .feature-card .tag1 { background-color: var(--accent1); }
+    .feature-card .tag2 { background-color: var(--accent2); }
+    .feature-card .tag3 { background-color: var(--accent3); }
+    .feature-card .tag4 { background-color: var(--accent4); }
+
+    .testimonial p {
+      font-size: 0.95em;
+      color: var(--secondary);
+    }
+
+    .author {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 0.85em;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .section-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .section-box {
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: black;
+      padding: 20px;
+      border-radius: 20px;
+      width: 300px;
+    }
+
+    .section-box h3 {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <div class="logo">Prathik Agency</div>
+    <nav>
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">About us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <button class="nav-btn">Book a demo</button>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="zoom-in">
+    <h1>A creative marketing agency<br>with a twist</h1>
+    <p>We help small startups and brands to get better exposure through different social media channels. Meet the best network distribution today.</p>
+    <div class="buttons">
+      <button class="get-started">Get started</button>
+      <button class="book-demo">Book a demo</button>
+    </div>
+  </section>
+
+  <div class="partners" data-aos="fade-up">
+    <span>🖥️ itech</span>
+    <span>💡 DevWise</span>
+    <span>⚡ Flash</span>
+    <span>🔄 Invert</span>
+    <span>⚡ Proline</span>
+  </div>
+
+  <div class="features">
+    <div class="testimonial" data-aos="fade-up-right">
+      <p>“MarketingZen came at the right time when started to scale our agency. This tool is saving us a lot of time and we are more efficient than ever.”</p>
+      <div class="author">Carl Dean<br><small>CEO, Dymatize Inc</small></div>
+    </div>
+
+    <div class="feature-card" data-aos="fade-up">
+      <span class="tag1">Network distribution</span>
+      <span class="tag2">Cross promotion</span>
+      <span class="tag3">Content creation</span>
+      <span class="tag4">Influencer marketing</span>
+    </div>
+
+    <div class="testimonial" data-aos="fade-up-left">
+      <p>“MarketingZen came at the right time when started to scale our agency. This tool is saving us a lot of time and we are more efficient than ever.”</p>
+      <div class="author">Carl Dean<br><small>CEO, Dymatize Inc</small></div>
+    </div>
+  </div>
+
+  <h2 class="section-title" data-aos="fade-down">Everything in one place</h2>
+
+  <div class="section-info">
+    <div class="section-box" data-aos="zoom-in-up">
+      <h3>Influencer marketing</h3>
+      <p>No more back and forth on partnerships. We provide you tools and people to launch instantly.</p>
+    </div>
+
+    <div class="section-box" data-aos="zoom-in-up" data-aos-delay="150">
+      <h3>Cross Promotion</h3>
+      <p>Grow your brand by promoting through complementary networks for maximum visibility.</p>
+    </div>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
