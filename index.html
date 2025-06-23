@@ -70,7 +70,7 @@
       cursor: pointer;
     }
 
-   .hero {
+    .hero {
       text-align: center;
       padding: 100px 20px 80px;
       background:
@@ -80,13 +80,23 @@
       background-position: center;
       background-repeat: no-repeat;
       color: white;
-
     }
 
     .hero h1 {
       font-size: 2.5em;
       font-weight: 800;
       margin-bottom: 20px;
+    }
+
+    /* 👇 Floating animation added */
+    .floating {
+      animation: floatUpDown 4s ease-in-out infinite;
+    }
+
+    @keyframes floatUpDown {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
 
     .hero p {
@@ -229,6 +239,37 @@
         justify-content: center;
       }
     }
+    /* Scrolling animation for feature card */
+.scroll-box {
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  animation: scrollTags 8s linear infinite;
+}
+
+@keyframes scrollTags {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* Tag styles */
+.tag {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 8px auto;
+  border-radius: 12px;
+  font-size: 0.9em;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+}
+
   </style>
 </head>
 <body>
@@ -246,7 +287,7 @@
   </header>
 
   <section class="hero" data-aos="zoom-in">
-    <h1>A creative marketing agency<br>with a twist</h1>
+    <h1 class="floating">A creative marketing agency<br>with a twist</h1>
     <p>We help small startups and brands to get better exposure through different social media channels. Meet the best network distribution today.</p>
     <div class="buttons">
       <button class="get-started">Get started</button>
@@ -268,12 +309,21 @@
       <div class="author">Carl Dean<br><small>CEO, Dymatize Inc</small></div>
     </div>
 
-    <div class="feature-card" data-aos="fade-up">
-      <span class="tag1">Network distribution</span>
-      <span class="tag2">Cross promotion</span>
-      <span class="tag3">Content creation</span>
-      <span class="tag4">Influencer marketing</span>
-    </div>
+    <div class="feature-card scroll-box" data-aos="fade-up">
+  <div class="scroll-content">
+    <span class="tag tag1">Network distribution</span>
+    <span class="tag tag2">Cross promotion</span>
+    <span class="tag tag3">Content creation</span>
+    <span class="tag tag4">Influencer marketing</span>
+
+    <!-- Duplicate for infinite scroll -->
+    <span class="tag tag1">Network distribution</span>
+    <span class="tag tag2">Cross promotion</span>
+    <span class="tag tag3">Content creation</span>
+    <span class="tag tag4">Influencer marketing</span>
+  </div>
+</div>
+
 
     <div class="testimonial" data-aos="fade-up-left">
       <p>“MarketingZen came at the right time when started to scale our agency. This tool is saving us a lot of time and we are more efficient than ever.”</p>
